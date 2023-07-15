@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal_MAUI__FV__ME.RegistroPage">
@@ -26,6 +27,13 @@
         <Entry x:Name="txtHorario" Keyboard="Numeric" />
 
         <Button Text="Agregar" Clicked="Agregar_Clicked" />
+
+        <!-- Campo de búsqueda -->
+            <Label Text="Búsqueda:" FontSize="16" />
+            <Entry x:Name="txtBusqueda"  />
+
+
+        <Button Text="Buscar" Clicked="Buscar_Clicked" />
 
         <ListView x:Name="lstRegistros" ItemsSource="{Binding Registros_F}">
             <ListView.Header>

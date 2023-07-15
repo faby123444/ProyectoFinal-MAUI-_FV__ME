@@ -14,7 +14,7 @@ namespace ProyectoFinal_MAUI__FV__ME.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-162TOV5;Initial Catalog=ProyectoFinalProgra;Integrated Security=True;TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Data Source=PROOS10;Initial Catalog=ProyectoFinalProgra;Integrated Security=True;TrustServerCertificate=true");
 
         }
     }

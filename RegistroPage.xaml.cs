@@ -70,6 +70,36 @@ namespace ProyectoFinal_MAUI__FV__ME
             DisplayAlert("Éxito", "Registro agregado correctamente.", "OK");
         }
 
+        private void Buscar_Clicked(object sender, EventArgs e)
+        {
+            string searchTerm = txtBusqueda.Text?.Trim();
+
+            var query = _context.Registro_F.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                query = query.Where(registro =>
+                    registro.Materia.Contains(searchTerm) ||
+                    registro.Profesor.Contains(searchTerm));
+            }
+
+            var resultados = query.ToList();
+
+            if (resultados.Count == 0)
+            {
+                DisplayAlert("No se encontraron resultados", "No se encontraron registros que coincidan con los criterios de búsqueda.", "OK");
+                return;
+            }
+
+            Registros_F.Clear();
+            foreach (var resultado in resultados)
+            {
+                Registros_F.Add(resultado);
+            }
+        }
+
+
+
 
         private void LimpiarCampos()
         {
