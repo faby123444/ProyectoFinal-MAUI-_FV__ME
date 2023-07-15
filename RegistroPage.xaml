@@ -17,7 +17,7 @@
         <Entry x:Name="txtCalificacion" Keyboard="Numeric" />
 
         <Label Text="Descripción" FontSize="16" />
-        <Editor x:Name="txtDescripcion" HeightRequest="100" />
+        <Editor x:Name="txtDescripcion" />
 
         <Label Text="Cualidad" FontSize="16" />
         <Entry x:Name="txtCualidad" />
