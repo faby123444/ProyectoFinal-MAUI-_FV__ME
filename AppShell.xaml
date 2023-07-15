@@ -18,5 +18,9 @@
         Title="Recomendacion"
         ContentTemplate="{DataTemplate local:RegistroPage}"
         Route="Profes" />
+    <ShellContent
+        Title="Rie con nosotros"
+        ContentTemplate="{DataTemplate local:JokePage}"
+        Route="Rie con nosotros" />
 
 </Shell>
