@@ -3,39 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal_MAUI__FV__ME.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <StackLayout Padding="10">
+        <Label Text="Bienvenido - UNIVERSIDAD DE LAS AMERICAS" FontSize="30" HorizontalOptions="Center" Margin="0,10,0,0" />
+        <Label Text=" " FontSize="15" HorizontalOptions="Center" Margin="0,10,0,0" />
+        <Label Text="En la Universidad de las Américas, el conocimiento es un elemento crucial para el éxito académico y profesional."
+                   Margin="0,10,0,0" />
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+        <Label Text="Cada nuevo semestre para los estudiantes es un desafío nuevo y la necesidad de elegir un nuevo horario suele ser un gran problema, debido a la importancia que esta conlleva decidimos crear student help para facilitar la toma de decisión de los estudiantes."
+                   Margin="0,10,0,0" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
-    </ScrollView>
+
+        <Label Text="La manera en la que aportan a los alumnos es brindándoles información acerca de los docentes, una calificación del profesor donde los estudiantes que ya han tomado materia con este docente podrán dar su sincera opinión, una descripción breve de cómo se siente el estudiante con el profesor, una cualidad del docente y el horario en el que el docente labora."
+                   Margin="0,10,0,0" />
+
+
+
+        <Label Text="Asimismo, la página web tiene como uno de sus objetivos principales generar un apoyo directo de estudiante a estudiante, lo que puede ayudar a mejorar su vida estudiantil."
+                   Margin="0,10,0,0" />
+    </StackLayout>
 
 </ContentPage>

@@ -7,9 +7,13 @@
     Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Home"
+        Title="HELP STUDENTS"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="Quien somos?" />
+    <ShellContent
+        Title="Objetivo"
+        ContentTemplate="{DataTemplate local:Objetivos_M_F}"
+        Route="Objetivos" />
     <ShellContent
         Title="Recomendacion"
         ContentTemplate="{DataTemplate local:RegistroPage}"

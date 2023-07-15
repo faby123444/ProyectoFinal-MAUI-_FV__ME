@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal_MAUI__FV__ME.Objetivos_M_F"
+             Title="Objetivos_M_F">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Objetivos" FontSize="24" HorizontalOptions="Center" Margin="0,10,0,0" />
+            <ScrollView>
+                <StackLayout x:Name="contentLayout" Padding="10">
+                    <Label x:Name="page1Label" Text="1. Facilitar la elección de horarios y materias de los alumnos al proporcionar información clara y detallada sobre los profesores y recomendaciones."
+                           IsVisible="True" />
+                    <Label x:Name="page2Label" Text="2. Permitir a los usuarios registrados agregar, editar y eliminar información sobre los profesores y el detalle, fomentando así una comunidad colaborativa en la que los alumnos puedan contribuir a mejorar la información disponible."
+                           IsVisible="False" />
+                    <Label x:Name="page3Label" Text="3. Generar un apoyo de estudiante a estudiante para ayudar a sobrellevar de mejor manera su vida estudiantil."
+                           IsVisible="False" />
+                    <Label x:Name="page4Label" Text="4. Ayudar a los estudiantes a tomar decisiones informadas al momento de elegir los cursos y horarios, al permitirles conocer la reputación y calidad de los profesores que imparten las materias."
+                           IsVisible="False" />
+                    <Label x:Name="page5Label" Text="5. Crear una plataforma de ayuda para que los estudiantes de la Universidad de las Américas puedan compartir sus vivencias y ayudarse mutuamente a crear un mejor horario."
+                           IsVisible="False" />
+                </StackLayout>
+            </ScrollView>
+            <StackLayout x:Name="paginationLayout" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="1" Clicked="ChangePage" />
+                <Button Text="2" Clicked="ChangePage" />
+                <Button Text="3" Clicked="ChangePage" />
+                <Button Text="4" Clicked="ChangePage" />
+                <Button Text="5" Clicked="ChangePage" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
