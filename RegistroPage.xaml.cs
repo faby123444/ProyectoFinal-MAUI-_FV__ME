@@ -98,6 +98,24 @@ namespace ProyectoFinal_MAUI__FV__ME
             }
         }
 
+        private void ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item is Registro_F registro)
+            {
+                string detalles = $"Semestre: {registro.Semestre}\n" +
+                                  $"Materia: {registro.Materia}\n" +
+                                  $"Profesor: {registro.Profesor}\n" +
+                                  $"Calificación: {registro.Calificacion}\n" +
+                                  $"Descripción: {registro.Descripcion}\n" +
+                                  $"Cualidad: {registro.Cualidad}\n" +
+                                  $"Horario: {registro.Horario}";
+
+                DisplayAlert("Detalles del registro", detalles, "OK");
+            }
+
+            // Desactivar la selección del elemento
+            ((ListView)sender).SelectedItem = null;
+        }
 
 
 
