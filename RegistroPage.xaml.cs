@@ -39,36 +39,6 @@ namespace ProyectoFinal_MAUI__FV__ME
             LimpiarCampos();
             DisplayAlert("Éxito", "Registro agregado correctamente.", "OK");
         }
-
-        private void Actualizar_Clicked(object sender, EventArgs e)
-        {
-            if (lstRegistros.SelectedItem is Registro_F registroSeleccionado)
-            {
-                registroSeleccionado.Semestre = Convert.ToInt32(txtSemestre.Text);
-                registroSeleccionado.Materia = txtMateria.Text;
-                registroSeleccionado.Profesor = txtProfesor.Text;
-                registroSeleccionado.Calificacion = Convert.ToInt32(txtCalificacion.Text);
-                registroSeleccionado.Descripcion = txtDescripcion.Text;
-                registroSeleccionado.Cualidad = txtCualidad.Text;
-                registroSeleccionado.Horario = Convert.ToInt32(txtHorario.Text);
-
-                _context.SaveChanges();
-                DisplayAlert("Éxito", "Registro actualizado correctamente.", "OK");
-            }
-        }
-
-        private void Eliminar_Clicked(object sender, EventArgs e)
-        {
-            if (lstRegistros.SelectedItem is Registro_F registroSeleccionado)
-            {
-                _context.Registro_F.Remove(registroSeleccionado);
-                _context.SaveChanges();
-                Registros_F.Remove(registroSeleccionado);
-                LimpiarCampos();
-                DisplayAlert("Éxito", "Registro eliminado correctamente.", "OK");
-            }
-        }
-
         private void LimpiarCampos()
         {
             txtSemestre.Text = string.Empty;

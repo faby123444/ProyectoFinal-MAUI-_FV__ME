@@ -4,14 +4,6 @@
     <StackLayout>
         <Label Text="Registros" FontSize="20" HorizontalOptions="Center" Margin="0,10,0,0" />
 
-        <ListView x:Name="lstRegistros" ItemsSource="{Binding Registros_F}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Materia}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
         <Label Text="Semestre" FontSize="16" />
         <Entry x:Name="txtSemestre" Keyboard="Numeric" />
 
@@ -34,7 +26,55 @@
         <Entry x:Name="txtHorario" Keyboard="Numeric" />
 
         <Button Text="Agregar" Clicked="Agregar_Clicked" />
-        <Button Text="Actualizar" Clicked="Actualizar_Clicked" />
-        <Button Text="Eliminar" Clicked="Eliminar_Clicked" />
+
+        <ListView x:Name="lstRegistros" ItemsSource="{Binding Registros_F}">
+            <ListView.Header>
+                <Grid BackgroundColor="#F2F2F2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Semestre" FontSize="16" HorizontalOptions="Center" Padding="10" Grid.Column="0" />
+                    <Label Text="Materia" FontSize="16" HorizontalOptions="Center" Padding="10" Grid.Column="1" />
+                    <Label Text="Profesor" FontSize="16" HorizontalOptions="Center" Padding="10" Grid.Column="2" />
+                    <Label Text="Calificación" FontSize="16" HorizontalOptions="Center" Padding="10" Grid.Column="3" />
+                    <Label Text="Descripción" FontSize="16" HorizontalOptions="Center" Padding="10" Grid.Column="4" />
+                    <Label Text="Cualidad" FontSize="16" HorizontalOptions="Center" Padding="10" Grid.Column="5" />
+                    <Label Text="Horario" FontSize="16" HorizontalOptions="Center" Padding="10" Grid.Column="6" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Semestre}" Grid.Column="0" HorizontalOptions="Center" Padding="10" />
+                            <Label Text="{Binding Materia}" Grid.Column="1" HorizontalOptions="Center" Padding="10" />
+                            <Label Text="{Binding Profesor}" Grid.Column="2" HorizontalOptions="Center" Padding="10" />
+                            <Label Text="{Binding Calificacion}" Grid.Column="3" HorizontalOptions="Center" Padding="10" />
+                            <Label Text="{Binding Descripcion}" Grid.Column="4" HorizontalOptions="Center" Padding="10" />
+                            <Label Text="{Binding Cualidad}" Grid.Column="5" HorizontalOptions="Center" Padding="10" />
+                            <Label Text="{Binding Horario}" Grid.Column="6" HorizontalOptions="Center" Padding="10" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
+
