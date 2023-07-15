@@ -1,0 +1,40 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal_MAUI__FV__ME.RegistroPage">
+    <StackLayout>
+        <Label Text="Registros" FontSize="20" HorizontalOptions="Center" Margin="0,10,0,0" />
+
+        <ListView x:Name="lstRegistros" ItemsSource="{Binding Registros_F}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Materia}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Text="Semestre" FontSize="16" />
+        <Entry x:Name="txtSemestre" Keyboard="Numeric" />
+
+        <Label Text="Materia" FontSize="16" />
+        <Entry x:Name="txtMateria" />
+
+        <Label Text="Profesor" FontSize="16" />
+        <Entry x:Name="txtProfesor" />
+
+        <Label Text="Calificación" FontSize="16" />
+        <Entry x:Name="txtCalificacion" Keyboard="Numeric" />
+
+        <Label Text="Descripción" FontSize="16" />
+        <Editor x:Name="txtDescripcion" HeightRequest="100" />
+
+        <Label Text="Cualidad" FontSize="16" />
+        <Entry x:Name="txtCualidad" />
+
+        <Label Text="Horario" FontSize="16" />
+        <Entry x:Name="txtHorario" Keyboard="Numeric" />
+
+        <Button Text="Agregar" Clicked="Agregar_Clicked" />
+        <Button Text="Actualizar" Clicked="Actualizar_Clicked" />
+        <Button Text="Eliminar" Clicked="Eliminar_Clicked" />
+    </StackLayout>
+</ContentPage>
