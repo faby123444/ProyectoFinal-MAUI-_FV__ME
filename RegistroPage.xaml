@@ -29,6 +29,9 @@
 
             <Button Text="Agregar" Clicked="Agregar_Clicked" />
 
+            <Grid HorizontalOptions="Center">
+                <Label Text="-----------------------------------------------------------------------------------" FontSize="40" />
+            </Grid>
             <!-- Campo de búsqueda -->
             <Label Text="Búsqueda:" FontSize="16" />
             <Entry x:Name="txtBusqueda" />
@@ -83,6 +86,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Grid HorizontalOptions="Center">
+                <Label Text="-----------------------------------------------------------------------------------" FontSize="40" />
+            </Grid>
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -14,13 +14,27 @@ namespace ProyectoFinal_MAUI__FV__ME
         public RegistroPage()
         {
             InitializeComponent();
-            Registros_F = new ObservableCollection<Registro_F>(_context.Registro_F.ToList());
+            Registros_F = new ObservableCollection<Registro_F>();
+
+            // Ordenar los registros por calificación de manera descendente
+            var registrosOrdenados = _context.Registro_F.OrderByDescending(registro => registro.Calificacion).ToList();
+            foreach (var registro in registrosOrdenados)
+            {
+                Registros_F.Add(registro);
+            }
 
             BindingContext = this;
         }
 
         private void Agregar_Clicked(object sender, EventArgs e)
         {
+            Registros_F.Clear();
+
+            foreach (var registro in _context.Registro_F.ToList())
+            {
+                Registros_F.Add(registro);
+            }
+
             if (string.IsNullOrWhiteSpace(txtSemestre.Text) || string.IsNullOrWhiteSpace(txtMateria.Text) ||
                 string.IsNullOrWhiteSpace(txtProfesor.Text) || string.IsNullOrWhiteSpace(txtCalificacion.Text) ||
                 string.IsNullOrWhiteSpace(txtDescripcion.Text) || string.IsNullOrWhiteSpace(txtCualidad.Text) ||
@@ -64,7 +78,14 @@ namespace ProyectoFinal_MAUI__FV__ME
 
             _context.Registro_F.Add(nuevoRegistro);
             _context.SaveChanges();
-            Registros_F.Add(nuevoRegistro);
+
+            // Ordenar los registros nuevamente
+            var registrosOrdenados = _context.Registro_F.OrderByDescending(registro => registro.Calificacion).ToList();
+            Registros_F.Clear();
+            foreach (var registro in registrosOrdenados)
+            {
+                Registros_F.Add(registro);
+            }
 
             LimpiarCampos();
             DisplayAlert("Éxito", "Registro agregado correctamente.", "OK");
@@ -83,7 +104,7 @@ namespace ProyectoFinal_MAUI__FV__ME
                     registro.Profesor.Contains(searchTerm));
             }
 
-            var resultados = query.ToList();
+            var resultados = query.OrderByDescending(registro => registro.Calificacion).ToList();
 
             if (resultados.Count == 0)
             {
@@ -117,8 +138,6 @@ namespace ProyectoFinal_MAUI__FV__ME
             ((ListView)sender).SelectedItem = null;
         }
 
-
-
         private void LimpiarCampos()
         {
             txtSemestre.Text = string.Empty;
@@ -131,5 +150,3 @@ namespace ProyectoFinal_MAUI__FV__ME
         }
     }
 }
-
-
