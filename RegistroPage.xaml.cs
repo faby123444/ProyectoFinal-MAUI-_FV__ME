@@ -81,7 +81,7 @@ namespace ProyectoFinal_MAUI__FV__ME
 
             // Ordenar los registros nuevamente
             var registrosOrdenados = _context.Registro_F.OrderByDescending(registro => registro.Calificacion).ToList();
-            Registros_F.Clear();
+            
             foreach (var registro in registrosOrdenados)
             {
                 Registros_F.Add(registro);

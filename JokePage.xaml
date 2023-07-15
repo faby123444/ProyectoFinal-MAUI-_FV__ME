@@ -1,9 +1,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal_MAUI__FV__ME.JokePage"
-             Title="JokePage">
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <Button Text="Obtener Chiste" Clicked="JokeButton_Clicked" x:Name="jokeButton" />
-        <Label Text="" x:Name="contentLabel" />
+             Title="JokePage"
+             BackgroundColor="Black">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+        <Label Text="¡Desata tu poder inglés y descubre chistes en inglés!" FontSize="30" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20" TextColor="Lime" />
+
+        <Label Text="El inglés es una habilidad fundamental para el futuro, especialmente para los ingenieros de software." FontSize="16" HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" TextColor="#F44336" />
+
+        <Label Text="Acceso a información técnica: Imagina que estás buscando una solución a un error molesto en tu código. Bueno, adivina qué... ¡la mayoría de los recursos y documentación útiles están en inglés! Aprende inglés y desbloquea el tesoro de conocimientos de la comunidad de desarrolladores." FontSize="16" HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" TextColor="#E91E63" />
+
+        <Label Text="Comunicación global: La industria del software es como una fiesta mundial de programadores. Y, ¿adivina qué idioma se habla en esa fiesta? ¡Sí, el inglés! No te quedes atrás en las conversaciones técnicas y las bromas de programación, ¡domina el inglés y únete al club!" FontSize="16" HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" TextColor="#9C27B0" />
+
+        <Label Text="Oportunidades laborales: Sabes qué dicen... ¡conocer inglés, mejores trabajos! El inglés puede abrir puertas a empleos remotos, proyectos internacionales y oportunidades de ascenso. Además, los reclutadores estarán impresionados cuando les digas que puedes decir 'Hello, World!' en varios idiomas." FontSize="16" HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" TextColor="#673AB7" />
+
+        <Button Text="JOKE" Clicked="JokeButton_Clicked" x:Name="jokeButton" BackgroundColor="#2ECC71" TextColor="White" CornerRadius="10" Margin="0,20,0,0" />
+
+        <Label Text="" x:Name="contentLabel" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White" />
     </StackLayout>
 </ContentPage>
+
+
+
+
+
