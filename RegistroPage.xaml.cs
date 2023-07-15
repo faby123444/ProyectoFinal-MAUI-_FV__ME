@@ -30,15 +30,36 @@ namespace ProyectoFinal_MAUI__FV__ME
                 return;
             }
 
+            int semestre;
+            if (!int.TryParse(txtSemestre.Text, out semestre) || semestre < 1 || semestre > 10)
+            {
+                DisplayAlert("Error", "El semestre debe ser un número del 1 al 10.", "OK");
+                return;
+            }
+
+            int calificacion;
+            if (!int.TryParse(txtCalificacion.Text, out calificacion) || calificacion < 1 || calificacion > 10)
+            {
+                DisplayAlert("Error", "La calificación debe ser un número del 1 al 10.", "OK");
+                return;
+            }
+
+            int horario;
+            if (!int.TryParse(txtHorario.Text, out horario) || horario < 1 || horario > 3)
+            {
+                DisplayAlert("Error", "El horario debe ser un número del 1 al 3.", "OK");
+                return;
+            }
+
             var nuevoRegistro = new Registro_F
             {
-                Semestre = Convert.ToInt32(txtSemestre.Text),
+                Semestre = semestre,
                 Materia = txtMateria.Text,
                 Profesor = txtProfesor.Text,
-                Calificacion = Convert.ToInt32(txtCalificacion.Text),
+                Calificacion = calificacion,
                 Descripcion = txtDescripcion.Text,
                 Cualidad = txtCualidad.Text,
-                Horario = Convert.ToInt32(txtHorario.Text)
+                Horario = horario
             };
 
             _context.Registro_F.Add(nuevoRegistro);
@@ -48,6 +69,7 @@ namespace ProyectoFinal_MAUI__FV__ME
             LimpiarCampos();
             DisplayAlert("Éxito", "Registro agregado correctamente.", "OK");
         }
+
 
         private void LimpiarCampos()
         {
