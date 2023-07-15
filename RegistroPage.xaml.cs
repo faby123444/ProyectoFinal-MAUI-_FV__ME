@@ -21,6 +21,15 @@ namespace ProyectoFinal_MAUI__FV__ME
 
         private void Agregar_Clicked(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtSemestre.Text) || string.IsNullOrWhiteSpace(txtMateria.Text) ||
+                string.IsNullOrWhiteSpace(txtProfesor.Text) || string.IsNullOrWhiteSpace(txtCalificacion.Text) ||
+                string.IsNullOrWhiteSpace(txtDescripcion.Text) || string.IsNullOrWhiteSpace(txtCualidad.Text) ||
+                string.IsNullOrWhiteSpace(txtHorario.Text))
+            {
+                DisplayAlert("Error", "Necesitas completar todos los campos.", "OK");
+                return;
+            }
+
             var nuevoRegistro = new Registro_F
             {
                 Semestre = Convert.ToInt32(txtSemestre.Text),
@@ -39,6 +48,7 @@ namespace ProyectoFinal_MAUI__FV__ME
             LimpiarCampos();
             DisplayAlert("Éxito", "Registro agregado correctamente.", "OK");
         }
+
         private void LimpiarCampos()
         {
             txtSemestre.Text = string.Empty;
@@ -51,4 +61,5 @@ namespace ProyectoFinal_MAUI__FV__ME
         }
     }
 }
+
 
