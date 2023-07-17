@@ -33,6 +33,12 @@
                 HorizontalOptions="Center" />
                     <Label x:Name="page3Label" Text="3. Generar un apoyo de estudiante a estudiante para ayudar a sobrellevar de mejor manera su vida estudiantil."
                            IsVisible="False" />
+                    <Image x:Name="Image3"
+                Source="feli.jpg"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                           IsVisible="False"
+                HorizontalOptions="Center" />
                     <Label x:Name="page4Label" Text="4. Ayudar a los estudiantes a tomar decisiones informadas al momento de elegir los cursos y horarios, al permitirles conocer la reputación y calidad de los profesores que imparten las materias."
                            IsVisible="False" />
                     <Label x:Name="page5Label" Text="5. Crear una plataforma de ayuda para que los estudiantes de la Universidad de las Américas puedan compartir sus vivencias y ayudarse mutuamente a crear un mejor horario."

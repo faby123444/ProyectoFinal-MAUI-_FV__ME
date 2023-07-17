@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\crud.png" />
+	  <None Remove="Resources\Images\feli.jpg" />
 	  <None Remove="Resources\Images\reloj.jpg" />
 	  <None Remove="Resources\Images\udla_logo.jpg" />
 	</ItemGroup>
