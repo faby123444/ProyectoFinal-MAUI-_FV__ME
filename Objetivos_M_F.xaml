@@ -5,11 +5,24 @@
              Title="Objetivos_M_F">
     <ContentPage.Content>
         <StackLayout>
+            <Image
+                Source="udla_logo.jpg"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
+            
             <Label Text="Objetivos" FontSize="24" HorizontalOptions="Center" Margin="0,10,0,0" />
             <ScrollView>
                 <StackLayout x:Name="contentLayout" Padding="10">
                     <Label x:Name="page1Label" Text="1. Facilitar la elección de horarios y materias de los alumnos al proporcionar información clara y detallada sobre los profesores y recomendaciones."
                            IsVisible="True" />
+                    <Image x:Name="Image1"
+                Source="reloj.jpg"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                           IsVisible="True"
+                HorizontalOptions="Center" />
+                    
                     <Label x:Name="page2Label" Text="2. Permitir a los usuarios registrados agregar, editar y eliminar información sobre los profesores y el detalle, fomentando así una comunidad colaborativa en la que los alumnos puedan contribuir a mejorar la información disponible."
                            IsVisible="False" />
                     <Label x:Name="page3Label" Text="3. Generar un apoyo de estudiante a estudiante para ayudar a sobrellevar de mejor manera su vida estudiantil."

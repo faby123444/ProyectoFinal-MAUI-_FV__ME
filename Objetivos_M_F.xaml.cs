@@ -12,6 +12,7 @@ public partial class Objetivos_M_F : ContentPage
         {
             // Hide all labels
             page1Label.IsVisible = false;
+            Image1.IsVisible = false;
             page2Label.IsVisible = false;
             page3Label.IsVisible = false;
             page4Label.IsVisible = false;
@@ -24,6 +25,7 @@ public partial class Objetivos_M_F : ContentPage
             {
                 case 1:
                     page1Label.IsVisible = true;
+                    Image1.IsVisible = true;
                     break;
                 case 2:
                     page2Label.IsVisible = true;
