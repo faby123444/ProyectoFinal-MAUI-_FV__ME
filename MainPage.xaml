@@ -4,7 +4,11 @@
              x:Class="ProyectoFinal_MAUI__FV__ME.MainPage">
 
     <StackLayout Padding="10">
-        
+        <Image
+                Source="udla_logo.jpg"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
         <Label Text="Bienvenido - UNIVERSIDAD DE LAS AMERICAS" FontSize="30" HorizontalOptions="Center" Margin="0,10,0,0" />
         <Label Text=" " FontSize="15" HorizontalOptions="Center" Margin="0,10,0,0" />
         <Label Text="En la Universidad de las Américas, el conocimiento es un elemento crucial para el éxito académico y profesional."
