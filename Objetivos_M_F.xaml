@@ -25,6 +25,12 @@
                     
                     <Label x:Name="page2Label" Text="2. Permitir a los usuarios registrados agregar, editar y eliminar información sobre los profesores y el detalle, fomentando así una comunidad colaborativa en la que los alumnos puedan contribuir a mejorar la información disponible."
                            IsVisible="False" />
+                    <Image x:Name="Image2"
+                Source="crud.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                           IsVisible="False"
+                HorizontalOptions="Center" />
                     <Label x:Name="page3Label" Text="3. Generar un apoyo de estudiante a estudiante para ayudar a sobrellevar de mejor manera su vida estudiantil."
                            IsVisible="False" />
                     <Label x:Name="page4Label" Text="4. Ayudar a los estudiantes a tomar decisiones informadas al momento de elegir los cursos y horarios, al permitirles conocer la reputación y calidad de los profesores que imparten las materias."
